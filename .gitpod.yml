@@ -7,7 +7,9 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks
 tasks:
-  - init: npm install
+  - init: |
+      npm install
+      npx prisma db push
     command: |
       export HMR_HOST=`gp url 24678`
       npm run dev
@@ -33,3 +35,4 @@ github:
 vscode:
   extensions:
     - svelte.svelte-vscode
+    - prisma.prisma

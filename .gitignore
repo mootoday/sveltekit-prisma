@@ -2,3 +2,5 @@
 node_modules
 /.svelte-kit
 /package
+prisma/dev.db
+prisma/dev.db-journal
