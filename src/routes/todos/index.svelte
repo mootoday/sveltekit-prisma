@@ -23,15 +23,9 @@
 </script>
 
 <script lang="ts">
+	import type { Todo } from "./_api";
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
-
-	type Todo = {
-		uid: string;
-		created_at: Date;
-		text: string;
-		done: boolean;
-	};
 
 	export let todos: Todo[];
 
