@@ -9,8 +9,3 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
-
-model Counter {
-  id    String @id @default(cuid())
-  count Int
-}
