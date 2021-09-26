@@ -1,7 +1,5 @@
 # Learn more about this Gitpod configuration file in the documentation at https://www.gitpod.io/docs/configuration
 ports:
-  - port: 24678
-    onOpen: ignore
   - port: 3000
     onOpen: open-preview
   - port: 5555
@@ -13,7 +11,7 @@ tasks:
       npm install
       npx prisma db push
     command: |
-      export HMR_HOST=`gp url 24678`
+      export HMR_HOST=`gp url 3000`
       npm run dev
   - command: npx prisma studio
 github:
