@@ -1,6 +1,6 @@
-import { PrismaClient } from '@prisma/client';
 import type { Request } from '@sveltejs/kit';
 import type { Locals } from '$lib/types';
+import PrismaClient from '$lib/prisma';
 
 /*
 	This module is used by the /todos.json and /todos/[uid].json

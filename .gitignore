@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /.svelte-kit
+/.vercel_build_output
 /package
 prisma/dev.db
 prisma/dev.db-journal
