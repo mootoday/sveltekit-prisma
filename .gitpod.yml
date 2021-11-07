@@ -17,6 +17,8 @@ tasks:
     env:
       DATABASE_URL: postgresql://gitpod@localhost/todos
   - command: npx prisma studio
+    env:
+      DATABASE_URL: postgresql://gitpod@localhost/todos
 github:
   prebuilds:
     # enable for the master/default branch (defaults to true)
