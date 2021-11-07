@@ -11,7 +11,6 @@ ports:
 tasks:
   - init: |
       npm install
-      npx prisma db push
     command: |
       export HMR_HOST=`gp url 3000`
       npm run dev
