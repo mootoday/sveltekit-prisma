@@ -11,6 +11,9 @@
     "format": "prettier --write --plugin-search-dir=. .",
     "postinstall": "prisma generate",
     "postbuild": "cp node_modules/@prisma/engines/query-engine-* .vercel_build_output/functions/node/render/;cp prisma/schema.prisma .vercel_build_output/functions/node/render/",
+    "predev": "npm run prisma:migrate:dev",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "prisma:migrate:reset": "prisma migrate reset --force",
     "vercel-build": "prisma generate && prisma migrate deploy && npm run build"
   },
   "devDependencies": {
