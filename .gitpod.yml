@@ -1,7 +1,11 @@
 # Learn more about this Gitpod configuration file in the documentation at https://www.gitpod.io/docs/configuration
+image: gitpod/workspace-postgres
+
 ports:
   - port: 3000
     onOpen: open-preview
+  - port: 5432
+    onOpen: ignore
   - port: 5555
     onOpen: open-browser
 
@@ -9,11 +13,14 @@ ports:
 tasks:
   - init: |
       npm install
-      npx prisma db push
     command: |
       export HMR_HOST=`gp url 3000`
       npm run dev
+    env:
+      DATABASE_URL: postgresql://gitpod@localhost/todos
   - command: npx prisma studio
+    env:
+      DATABASE_URL: postgresql://gitpod@localhost/todos
 github:
   prebuilds:
     # enable for the master/default branch (defaults to true)
