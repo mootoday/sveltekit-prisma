@@ -10,7 +10,7 @@
     "lint": "prettier --check --plugin-search-dir=. .",
     "format": "prettier --write --plugin-search-dir=. .",
     "postinstall": "prisma generate",
-    "postbuild": "cp node_modules/@prisma/engines/query-engine-* .vercel_build_output/functions/node/render/;cp prisma/schema.prisma .vercel_build_output/functions/node/render/",
+    "postbuild": "cp node_modules/@prisma/engines/*query* .vercel_build_output/functions/node/render/;cp prisma/schema.prisma .vercel_build_output/functions/node/render/",
     "predev": "npm run prisma:migrate:dev",
     "prisma:migrate:dev": "prisma migrate dev",
     "prisma:migrate:reset": "prisma migrate reset --force",
@@ -22,7 +22,7 @@
     "@types/cookie": "^0.4.0",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
-    "prisma": "^2.28.0",
+    "prisma": "^3.5.0",
     "svelte": "^3.34.0",
     "svelte-check": "^2.0.0",
     "svelte-preprocess": "^4.0.0",
@@ -33,7 +33,7 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
-    "@prisma/client": "^2.28.0",
+    "@prisma/client": "^3.5.0",
     "cookie": "^0.4.1"
   }
 }
